@@ -37,6 +37,11 @@ Without Email Configuration
 ~~~javascript
 
 var dbUri = "mongodb://127.0.0.1:27017/test";
+
+//example dbUri with username and password for the database test
+// var dbUri = "mongodb://username:pwd@127.0.0.1:27017/test";
+
+
 var basePath = "./backup";
 var Backup = require("backup-mongodb");
 
@@ -53,6 +58,11 @@ With Email Configuration
 ~~~javascript
 
 var dbUri = "mongodb://127.0.0.1:27017/test";
+
+//example dbUri with username and password for the database test
+// var dbUri = "mongodb://username:pwd@127.0.0.1:27017/test";
+
+
 var basePath = "./backup";
 var Backup = require("backup-mongodb");
 

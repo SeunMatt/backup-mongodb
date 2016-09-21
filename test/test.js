@@ -1,6 +1,10 @@
 
 var expect = require("chai").expect;
-var dbUri = "mongodb://smatt:smatt@127.0.0.1:27017/test"; //"mongodb://127.0.0.1:27017/test";
+var dbUri = "mongodb://127.0.0.1:27017/test"; 
+
+//example dbUri with username and password for the database test
+// var dbUri = "mongodb://username:pwd@127.0.0.1:27017/test";
+
 var basePath = "./backup";
 var Backup = require("../index.js");
 
