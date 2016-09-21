@@ -1,0 +1,79 @@
+[
+  {
+    "_id": "_User",
+    "username": "string",
+    "password": "string",
+    "updatedAt": "string",
+    "createdAt": "string",
+    "objectId": "string"
+  },
+  {
+    "_id": "_Session",
+    "sessionToken": "string",
+    "user": "*_User",
+    "createdWith": "object",
+    "restricted": "boolean",
+    "expiresAt": "date",
+    "updatedAt": "string",
+    "createdAt": "string",
+    "objectId": "string"
+  },
+  {
+    "_id": "Testimony",
+    "id": "number",
+    "testimony": "string",
+    "source": "string",
+    "category": "string",
+    "updatedAt": "string",
+    "createdAt": "string",
+    "objectId": "string",
+    "frequency": "string",
+    "appID": "string"
+  },
+  {
+    "_id": "Statistic",
+    "category": "string",
+    "frequency": "string",
+    "appID": "string",
+    "updatedAt": "string",
+    "objectId": "string",
+    "createdAt": "string"
+  },
+  {
+    "_id": "Message",
+    "message": "string",
+    "updatedAt": "string",
+    "createdAt": "string",
+    "objectId": "string"
+  },
+  {
+    "_id": "Hope",
+    "verse": "string",
+    "updatedAt": "string",
+    "createdAt": "string",
+    "objectId": "string"
+  },
+  {
+    "_id": "Category",
+    "id": "number",
+    "category": "string",
+    "updatedAt": "string",
+    "createdAt": "string",
+    "objectId": "string"
+  },
+  {
+    "_id": "Test",
+    "test_key": "array",
+    "updatedAt": "string",
+    "createdAt": "string",
+    "objectId": "string"
+  },
+  {
+    "_id": "TestClass",
+    "objectId": "string",
+    "updatedAt": "date",
+    "createdAt": "date",
+    "testimony": "string",
+    "category": "string"
+  }
+]
