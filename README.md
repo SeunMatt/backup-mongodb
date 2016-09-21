@@ -98,18 +98,20 @@ NOTE:
 
 	* You have to supply both the smtpOptions and emailOptions for your zip file to be sent to the designated email address.
 
+	* Provide the authentication to the desired database in the dbUri string
+
 
 API Reference
 =============
 
 params
 ------
+~~~
 
 * dbUri [required]: the uri of the desired database
 
 * basePath: The output folder e.g. "./backup"
 
-~~~
 * smtpOptions [required for email] {
 		host: "your.mailserver.hostdomain.com",
 		port: "the port on which your mail server is running",
@@ -139,6 +141,7 @@ Note
 
 * Please I strongly recommend, if you haven't yet, that you go and read the (nodemailer)[https://github.com/nodemailer/nodemailer] documentation for more understanding of the email config options
 
+* Provide the authentication to the desired database in the dbUri string
 
 Test
 =====
