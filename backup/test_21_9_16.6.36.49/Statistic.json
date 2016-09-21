@@ -1,0 +1,322 @@
+[
+  {
+    "_id": "5ijjaAHnRN",
+    "category": "General Updated 2",
+    "frequency": "1",
+    "appID": "irecountDemo",
+    "_updated_at": "2016-02-20T17:16:56.897Z",
+    "_created_at": "2016-02-20T17:13:08.895Z"
+  },
+  {
+    "_id": "4xf8DDMjhG",
+    "category": "General",
+    "appID": "IRECOUNT-en_GB(2016-02-23:08:13(PM))",
+    "frequency": "3",
+    "_updated_at": "2016-02-25T21:32:51.004Z",
+    "_created_at": "2016-02-25T21:32:51.004Z"
+  },
+  {
+    "_id": "EC94qIQQ5q",
+    "category": "Miracle Marriage",
+    "appID": "IRECOUNT-en_GB(2016-02-23:08:13(PM))",
+    "frequency": "0",
+    "_updated_at": "2016-02-25T21:32:51.373Z",
+    "_created_at": "2016-02-25T21:32:51.373Z"
+  },
+  {
+    "_id": "EPxmvmEGJL",
+    "category": "Miracle Job",
+    "appID": "IRECOUNT-en_GB(2016-02-23:08:13(PM))",
+    "frequency": "0",
+    "_updated_at": "2016-02-25T21:32:51.745Z",
+    "_created_at": "2016-02-25T21:32:51.745Z"
+  },
+  {
+    "_id": "hoGgq8pUXe",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "1",
+    "category": "Deliverance",
+    "_updated_at": "2016-09-05T12:08:24.132Z",
+    "_created_at": "2016-09-05T12:08:24.132Z"
+  },
+  {
+    "_id": "xlcVM7L2tt",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "2",
+    "category": "General",
+    "_updated_at": "2016-09-05T12:08:12.112Z",
+    "_created_at": "2016-09-05T12:08:12.112Z"
+  },
+  {
+    "_id": "UojtDFGAoo",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "7",
+    "category": "General Testimony",
+    "_updated_at": "2016-09-05T12:09:01.770Z",
+    "_created_at": "2016-09-05T12:09:01.770Z"
+  },
+  {
+    "_id": "dEboGUeaLh",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "2",
+    "category": "Career Breakthrough",
+    "_updated_at": "2016-09-05T12:09:03.188Z",
+    "_created_at": "2016-09-05T12:09:03.188Z"
+  },
+  {
+    "_id": "wnFZdgjNSH",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "1",
+    "category": "Miracle Job",
+    "_updated_at": "2016-09-05T12:09:03.820Z",
+    "_created_at": "2016-09-05T12:09:03.820Z"
+  },
+  {
+    "_id": "Qb5OPjTlTW",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "2",
+    "category": "Bareness Destroyed",
+    "_updated_at": "2016-09-05T12:09:04.169Z",
+    "_created_at": "2016-09-05T12:09:04.169Z"
+  },
+  {
+    "_id": "wTSb1FNs2D",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "2",
+    "category": "Career Breakthrough",
+    "_updated_at": "2016-09-05T12:09:04.500Z",
+    "_created_at": "2016-09-05T12:09:04.500Z"
+  },
+  {
+    "_id": "iEcNPHL6bJ",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "7",
+    "category": "General Testimony",
+    "_updated_at": "2016-09-05T12:09:04.668Z",
+    "_created_at": "2016-09-05T12:09:04.668Z"
+  },
+  {
+    "_id": "vCYDZij852",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "2",
+    "category": "General",
+    "_updated_at": "2016-09-05T12:09:04.755Z",
+    "_created_at": "2016-09-05T12:09:04.755Z"
+  },
+  {
+    "_id": "F41Cuigw28",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "1",
+    "category": "Deliverance",
+    "_updated_at": "2016-09-05T12:09:06.020Z",
+    "_created_at": "2016-09-05T12:09:06.020Z"
+  },
+  {
+    "_id": "URo0Ynz1Dq",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "1",
+    "category": "Miracle Job",
+    "_updated_at": "2016-09-05T12:09:06.295Z",
+    "_created_at": "2016-09-05T12:09:06.295Z"
+  },
+  {
+    "_id": "JG38Fh1GlO",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "2",
+    "category": "Bareness Destroyed",
+    "_updated_at": "2016-09-05T12:09:06.725Z",
+    "_created_at": "2016-09-05T12:09:06.725Z"
+  },
+  {
+    "_id": "a1aB2ZCpBw",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "7",
+    "category": "General Testimony",
+    "_updated_at": "2016-09-05T12:09:07.142Z",
+    "_created_at": "2016-09-05T12:09:07.142Z"
+  },
+  {
+    "_id": "teKF0gZgLU",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "2",
+    "category": "Career Breakthrough",
+    "_updated_at": "2016-09-05T12:09:07.287Z",
+    "_created_at": "2016-09-05T12:09:07.287Z"
+  },
+  {
+    "_id": "3e47AiGreD",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "2",
+    "category": "General",
+    "_updated_at": "2016-09-05T12:09:07.576Z",
+    "_created_at": "2016-09-05T12:09:07.576Z"
+  },
+  {
+    "_id": "PYR5D2PWag",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "1",
+    "category": "Miracle Job",
+    "_updated_at": "2016-09-05T12:09:14.263Z",
+    "_created_at": "2016-09-05T12:09:14.263Z"
+  },
+  {
+    "_id": "qrgn0dzWlK",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "1",
+    "category": "Deliverance",
+    "_updated_at": "2016-09-05T12:09:14.100Z",
+    "_created_at": "2016-09-05T12:09:14.100Z"
+  },
+  {
+    "_id": "ep2YFbymWp",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "2",
+    "category": "Bareness Destroyed",
+    "_updated_at": "2016-09-05T12:09:14.310Z",
+    "_created_at": "2016-09-05T12:09:14.310Z"
+  },
+  {
+    "_id": "HACe6E0bwh",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "1",
+    "category": "Miracle Job",
+    "_updated_at": "2016-09-05T12:16:41.698Z",
+    "_created_at": "2016-09-05T12:16:41.698Z"
+  },
+  {
+    "_id": "vjCrrmT5YA",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "1",
+    "category": "Deliverance",
+    "_updated_at": "2016-09-05T12:16:41.839Z",
+    "_created_at": "2016-09-05T12:16:41.839Z"
+  },
+  {
+    "_id": "L9oN30UFcV",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "7",
+    "category": "General Testimony",
+    "_updated_at": "2016-09-05T12:16:41.914Z",
+    "_created_at": "2016-09-05T12:16:41.914Z"
+  },
+  {
+    "_id": "X34r6ySyP8",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "2",
+    "category": "Bareness Destroyed",
+    "_updated_at": "2016-09-05T12:16:41.919Z",
+    "_created_at": "2016-09-05T12:16:41.919Z"
+  },
+  {
+    "_id": "AI2ZXqweWe",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "2",
+    "category": "Career Breakthrough",
+    "_updated_at": "2016-09-05T12:16:42.285Z",
+    "_created_at": "2016-09-05T12:16:42.285Z"
+  },
+  {
+    "_id": "iG6aprAvVT",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "2",
+    "category": "General",
+    "_updated_at": "2016-09-05T12:16:42.375Z",
+    "_created_at": "2016-09-05T12:16:42.375Z"
+  },
+  {
+    "_id": "4JM1OxaOzf",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "1",
+    "category": "Bareness Destroyed",
+    "_updated_at": "2016-09-05T12:41:09.954Z",
+    "_created_at": "2016-09-05T12:41:09.954Z"
+  },
+  {
+    "_id": "IQS9NphMKD",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "2",
+    "category": "General Testimony",
+    "_updated_at": "2016-09-05T12:41:09.988Z",
+    "_created_at": "2016-09-05T12:41:09.988Z"
+  },
+  {
+    "_id": "AArK4o01Ra",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "1",
+    "category": "General Testimony",
+    "_updated_at": "2016-09-05T12:41:23.867Z",
+    "_created_at": "2016-09-05T12:41:23.867Z"
+  },
+  {
+    "_id": "p2VqegbWrv",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "1",
+    "category": "General Testimony",
+    "_updated_at": "2016-09-05T12:42:39.798Z",
+    "_created_at": "2016-09-05T12:42:39.798Z"
+  },
+  {
+    "_id": "INv1dDWC4G",
+    "appID": "IRECOUNT-en_GB(2016-09-05:12:11(pm))",
+    "frequency": "1",
+    "category": "Deliverance",
+    "_updated_at": "2016-09-05T12:43:24.060Z",
+    "_created_at": "2016-09-05T12:43:24.060Z"
+  },
+  {
+    "_id": "PulgGEZicE",
+    "appID": "IRECOUNT-en_GB(2016-09-06:12:38(pm))",
+    "frequency": "1",
+    "category": "Deliverance",
+    "_updated_at": "2016-09-06T12:03:25.071Z",
+    "_created_at": "2016-09-06T12:03:25.071Z"
+  },
+  {
+    "_id": "UvEk0VcHVZ",
+    "appID": "IRECOUNT-en_GB(2016-09-06:12:38(pm))",
+    "frequency": "1",
+    "category": "Career Breakthrough",
+    "_updated_at": "2016-09-06T12:10:38.027Z",
+    "_created_at": "2016-09-06T12:10:38.027Z"
+  },
+  {
+    "_id": "b63CS8nmPh",
+    "appID": "IRECOUNT-en_GB(2016-09-06:12:38(pm))",
+    "frequency": "1",
+    "category": "Career Breakthrough",
+    "_updated_at": "2016-09-06T12:11:12.397Z",
+    "_created_at": "2016-09-06T12:11:12.397Z"
+  },
+  {
+    "_id": "FYCvszepk3",
+    "appID": "IRECOUNT-en_GB(2016-09-06:12:38(pm))",
+    "frequency": "2",
+    "category": "Career Breakthrough",
+    "_updated_at": "2016-09-06T12:14:50.586Z",
+    "_created_at": "2016-09-06T12:14:50.586Z"
+  },
+  {
+    "_id": "GFadTgXVd8",
+    "appID": "IRECOUNT-en_GB(2016-09-06:12:38(pm))",
+    "frequency": "1",
+    "category": "General Testimony",
+    "_updated_at": "2016-09-06T12:14:50.835Z",
+    "_created_at": "2016-09-06T12:14:50.835Z"
+  },
+  {
+    "_id": "pPoYyanJvE",
+    "appID": "IRECOUNT-en_GB(2016-09-06:12:38(pm))",
+    "frequency": "1",
+    "category": "Career Breakthrough",
+    "_updated_at": "2016-09-06T12:17:12.028Z",
+    "_created_at": "2016-09-06T12:17:12.028Z"
+  },
+  {
+    "_id": "dBQvoFMMtt",
+    "appID": "IRECOUNT-en_GB(2016-09-06:12:38(pm))",
+    "frequency": "1",
+    "category": "Career Breakthrough",
+    "_updated_at": "2016-09-06T12:17:12.409Z",
+    "_created_at": "2016-09-06T12:17:12.409Z"
+  }
+]
