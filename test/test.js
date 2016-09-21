@@ -5,7 +5,7 @@ var basePath = "./backup";
 var Backup = require("../index.js");
 
 
-// var dbAuth = {user: "seun", pass: "matthewE1"};
+// var dbAuth = {user: "seun", pass: "matthewE1"}
 
 describe("Backup", function() {
 
