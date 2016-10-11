@@ -96,7 +96,7 @@ var smtpOptions = {
 
 new Backup(dbUri, basePath, smtpOptions, emaiOptions).backup();
 
-//optionally you can call new Backup(dbUri, basePath).backup(done);
+//optionally you can call new Backup(dbUri, basePath, smtpOptions, emaiOptions).backup(done);
 //where done is the callback to be called when done
 
 ~~~
