@@ -1,6 +1,6 @@
 {
   "name": "backup-mongodb",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "This module will backup mongodb into a .zip archive and optionally send it to a email address",
   "main": "index.js",
   "scripts": {
@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/SeunMatt/backup-mongodb#readme",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.0.2"
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
   }
 }

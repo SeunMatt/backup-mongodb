@@ -25,7 +25,7 @@ Project Desc:
 @param(emailOptions) nodemailer emailOptions for configuring nodemailer
 
 NOTE: For the .zip file to be sent as an email, both smtpOptions and emailOptions have to be provided
-see the documenttation of nodemailer (https://github.com/nodemailer/nodemailer) to know more about the configuration options available
+see the documentation of nodemailer (https://github.com/nodemailer/nodemailer) to know more about the configuration options available
 
 LICENCE: MIT Licence (backup-mongodb/LICENSE)
 */
@@ -44,8 +44,7 @@ var winston = require("winston");
 var ee = new EventEmitter();
 
 //======== SETUP WINSTON TO USE FILE TRANSPORT AND CONSOLE ============
-// winston.add(winston.transports.File, { filename: 'debug.log', level: "error" });
- 
+
 var collectionNames = [];
 var basePath;
 var databaseUri;
@@ -54,8 +53,7 @@ var smtpConfig;
 var emailConfig;
 var isEmail = false; //tells whether email option is set or not
 var archiveName;
-var dbAuth; //auth of the db
-var timestamp; 
+var timestamp; //appended to the final folder name and .zip
 var d; //global var for the test done callback
 
 
@@ -63,14 +61,8 @@ var d; //global var for the test done callback
 function Backup(dbUri, bPath, smtpOptions, emailOptions ) {
 
 	if(!dbUri || !bPath) {
-		winston.error("missing construtor parameter \nDatabase URI = " + dbUri  + "\nBase Path = " + bPath);
-		throw new Error("missing construtor parameter \nDatabase URI = " + dbUri  + "\nBase Path = " + bPath);
-		return;
-	}
-
-	if(dbAuth) {
-		dbAuth = dbAuth;
-		winston.info("auth provided")
+		winston.error("Database URI and Base directory must be provided. \nGiven Database URI = " + dbUri  + "\n and Base Path = " + bPath);
+		throw new Error("Database URI and Base directory must be provided. \nGiven Database URI = " + dbUri  + "\n and Base Path = " + bPath);
 	}
 
 	databaseUri = dbUri;
@@ -85,6 +77,7 @@ function Backup(dbUri, bPath, smtpOptions, emailOptions ) {
 		isEmail = true;
 		smtpConfig = smtpOptions;
 		emailConfig = emailOptions;
+		winston.info("SMTP and Email Config Detected");
 	}
 };
 
@@ -94,21 +87,21 @@ Backup.prototype.backup = function(done) {
 
 	if(done) {
 		d = done;
-		winston.info("done callback specified for testing purpose");
+		winston.info("Done callback specified for testing purpose");
 	}
 
 	//=====CONNECT TO THE DB========
 	mongoClient.connect(databaseUri, function(error, db) {
-	if(error) { winston.error("error connecting to the mongodb server "  + error); }
+	if(error) { winston.error("error connecting to the mongodb server:  \nDB_URI: " + databaseUri + " \nERROR_MSG: " + error); }
 	else { 
-			winston.info("==========BACKUP PROCEDURE INITIATED=============\n\n");
+			winston.info("========== BACKUP PROCEDURE INITIATED =============\n\n");
 			winston.info("connected successfully to the mongodb server");
 	
 			//==== CREATE DIR FOR THE BACKUP FILES=========
 			fs.mkdirs(basePath, function(error){
-				if(error) { winston.error("error making the require directory " + error); }
+				if(error) { winston.error("error making the require base directory " + error); }
 				else { 
-					winston.info("dir created successfully ... "); 
+					winston.info("dir created successfully ... ");
 
 					//======LOAD ALL THE COLLECTIONS AVAILABLE IN THE DB ======
 					getAllCollections(db);
@@ -130,12 +123,13 @@ function getAllCollections(db) {
  					for(var i = 0; i < collections.length; i++) { 
  				   		var collectionName =  collections[i].s.name;
 
- 				   		 if(collectionName == dbName) {  } //this will remove the db name from the collection
- 				   		 else { collectionNames.push(collectionName); }	
+ 				   		 if(collectionName !== dbName) { //this will remove the db name from the collection
+                             collectionNames.push(collectionName);
+                         }
  				   		  
- 				   		if(i == collections.length - 1) { //the end of the loop
+ 				   		if(i === collections.length - 1) { //the end of the loop
  				   			winston.info("Collection Names = " + collectionNames);
- 				   			ee.emit("collectionScanned", db);  //signal end of scanning
+ 				   			ee.emit("collectionScanned", db);  //signal end of scanning db for collections
  				   		}
  				   	}
  				}
@@ -145,50 +139,49 @@ function getAllCollections(db) {
 
 
 function readFromDBAndWriteOut(db, index) {
+
  //=======LOOP THROUGH ALL THE COLLECTIONS AND WRITE THEM OUT =======
-    // console.log("readFromDBAndWriteOut called = " + index);
+ //    winston.info("readFromDBAndWriteOut called = " + index);
 	
-	if(index > collectionNames.length - 1) { //terminate the process when the index exceed the limit
+	if(index > collectionNames.length - 1) { //terminate the process when the index exceed the limit of the collectionNames
 		winston.info("Backup complete...");
 		db.close();
-		ee.emit("backupComplete"); 
-		
-	} else {	
+		ee.emit("backupComplete");
+
+	} else { //process the collectionNames[index]
 
 		var collectionName = collectionNames[index];
 	
 		db.collection(collectionName).find({}).toArray( function(error, data) {
 		if(error) { winston.error("error getting data from collection " + collectionName + ": " + error); }
+		else {
 
-		else { 
 			// DATA FOUND SO WRITE IT OUT INCLUDING EMPTY DATA
 			var fileName = basePath + "/" + collectionName + ".json";
 			fs.writeJson(fileName, data, function(error){
 				if(error) { winston.error("error writing file " + fileName + " " + error); }
-				else { 
-					
+				else {
 					winston.info("file " + fileName + " written successfully");
-				 	
+
 				 	//emit signal to progress
+					//this will essentially call this method again, recursively until all the collections in collectionNames [] has been processed
 				 	var obj = {};
 				 	obj.db = db;
-				 	obj.index = index = index + 1;
-				 	ee.emit("writeNext", obj); 
-				
+                    obj.index = index += 1;
+				 	ee.emit("writeNext", obj);
 				}
 			});
 		}
 	  });
 
-  } //END else
+    } //END else
 }
-
 
 
 function archive() {
 
- var fileName =   basePath + "/" + dbName + "_" + timestamp + ".zip";
- archiveName = fileName; //for use in sendMailAttach
+ var fileName = basePath + "/" + dbName + "_" + timestamp + ".zip";
+ archiveName = fileName; //for use in sendMailAttach; do not remove!
  var output = fs.createWriteStream(fileName);
  var archive = archiver("zip");
 
@@ -197,7 +190,7 @@ function archive() {
   	winston.info("zipping complete");
 
   	winston.info("=====================================");
-  	winston.info("ALL OUTPUT FILES CAN BE FOUND IN " + basePath)
+  	winston.info("ALL OUTPUT FILES CAN BE FOUND IN " + basePath);
   	winston.info("=====================================");
 
   	ee.emit("zippingComplete");
@@ -209,11 +202,13 @@ function archive() {
 
   archive.pipe(output);
 
-  archive.bulk([
-  	{ expand: true, cwd: basePath, src: ["*.json"] }
-  ]);
+  // archive.bulk([
+  // 	{ expand: true, cwd: basePath, src: ["*.json"] }
+  // ]);
 
-  archive.finalize();
+ archive.glob(basePath + "/*.json");
+
+ archive.finalize();
 
 }
 
@@ -230,8 +225,6 @@ function getDateString() {
 }
 
 
-
-
 function sendMailAttachment() {
 
  if(isEmail) {
@@ -245,23 +238,23 @@ function sendMailAttachment() {
 
 	smtpTransport.verify(function(error, success) {
 		
-		if(error) { winston.error("error in connection config " + error); }
+		if(error) { winston.error("error in mail connection config " + error); }
 		
 		else { 
 			
-			winston.info("connected successfully. config data OK sending message now ...");
+			winston.info("connected successfully. Mail Config data OK sending email now ...");
 				
 			smtpTransport.sendMail(emailConfig, function(error, response) {
 				
 				if(error) { 
-					winston.error("ERROR SENDING MAIL " + error);
+					winston.error("ERROR SENDING MAIL: " + error);
 					smtpTransport.close();
 					//=== if done callback is specified, call it here to signal end of process
 					if(d) { d(); }
 				 }
 				
 				else { 
-					winston.error("EMAIL SENT successfully " + JSON.stringify(response));
+					winston.info("EMAIL SENT successfully " + JSON.stringify(response));
 					smtpTransport.close();
 					//=== if done callback is specified, call it here to signal end of process
 					if(d) { d(); }
@@ -271,11 +264,10 @@ function sendMailAttachment() {
 
 		}
 	});
-
 	
  } else {
 
- 	winston.info("email object is not configured therefore not sending zip file as attachment");
+ 	winston.info("Email object is not configured therefore zip file will not be sent as attachment");
  	//=== if done callback is specified, call it here to signal end of process
 	if(d) { d(); }
  }
@@ -308,7 +300,6 @@ ee.on("backupComplete", function() {
 
 
 ee.on("zippingComplete", function() {
-	
 	sendMailAttachment();
 });
 
