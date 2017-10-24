@@ -7,11 +7,11 @@
     "test": "make test"
   },
   "dependencies": {
-    "archiver": "~1.0.0",
-    "fs-extra": "~0.30.0",
-    "mongodb": "~2.1.18",
-    "nodemailer": "~2.4.2",
-    "winston": "~2.2.0"
+    "archiver": "~2.1.0",
+    "fs-extra": "~4.0.2",
+    "mongodb": "~2.2.33",
+    "nodemailer": "~4.3.0",
+    "winston": "~2.4.0"
   },
   "repository": {
     "type": "git",
