@@ -6,7 +6,8 @@ This module will backup mongodb into .json files, archive it into .zip file that
 Motivation
 ==========
 
-I wrote this module as a simple straight forward module for backing up mongodb. I also realized that I need the backup file in an external environment other than the server (which of course is the essence of backup). Thus, I added the feature to zip the output .json files and then send them to an email using 
+I wrote this module as a simple straight forward module for backing up mongodb.
+I also realized that I need the backup file in an external environment other than the server (which of course is the essence of backup). Thus, I added the feature to zip the output .json files and then send them to an email using
 [nodemailer](https://github.com/nodemailer/nodemailer).
 From the email, I can access the files and use them for restoration anytime later.
 
@@ -181,4 +182,3 @@ added feature(s)
 LICENSE
 ========
 [MIT License](https://github.com/SeunMatt/backup-mongodb/blob/master/LICENSE)
-
